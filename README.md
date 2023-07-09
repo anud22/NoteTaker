@@ -19,7 +19,7 @@ To run project locally follow these steps -
 3. Using Notes app UI, create, save or delete the notes.
 
 ## Deployment Link
-Code is deployed at Heroku. It can be accessed by [Heroku URL]() <br>
+Code is deployed at Heroku. It can be accessed by [Heroku URL](https://mighty-stream-60543-b28aad666d1f.herokuapp.com/) <br>
 Github link to access the project is [Github URL](https://github.com/anud22/NoteTaker)
 
 ## Screenshot
