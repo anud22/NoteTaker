@@ -11,7 +11,7 @@ notes.get('/', (req, res) => {
         if (data.length > 0) {
             jsonData = JSON.parse(data);
         }
-        res.json(jsonData);
+        res.status(200).json(jsonData);
     }).catch((error) => {
         console.error('Error reading the db.json file:', error);
         res.status(400).json(error);
@@ -38,9 +38,7 @@ notes.delete('/:id', (req, res) => {
                 return;
             }
             const contents = JSON.parse(data);
-            console.log('old', contents);
             const newContents = contents.filter(x => x.id !== req.params.id);
-            console.log('new', newContents);
             if (contents.length === newContents.length) {
                 res.status(400).json("id not found");
                 return;
