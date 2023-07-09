@@ -24,7 +24,7 @@ To run project locally follow these steps -
 3. Using Notes app UI, create, save or delete the notes.
 
 ## Github Link
-Github link to access the project is [Github URL]()
+Github link to access the project is [Github URL](https://github.com/anud22/NoteTaker)
  
  ## Questions
  #### If you have any questions or need further clarification, feel free to reach out. We are here to help! You can ask questions by creating an issue in this repository or by reaching out to me 
