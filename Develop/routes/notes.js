@@ -11,7 +11,7 @@ notes.get('/', (req, res) => {
         if (data.length > 0) {
             jsonData = JSON.parse(data);
         }
-       res.json(jsonData);
+        res.json(jsonData);
     }).catch((error) => {
         console.error('Error reading the db.json file:', error);
         res.status(400).json(error);
@@ -20,7 +20,7 @@ notes.get('/', (req, res) => {
 
 notes.post('/', (req, res) => {
     const { title, text } = req.body;
-    const newNotes = { notes_id: uuid(), title: title, text: text };
+    const newNotes = { id: uuid(), title: title, text: text };
     if (title && text) {
         readAndAppend(dbPath, newNotes);
         res.status(200).json(newNotes);
@@ -38,8 +38,8 @@ notes.delete('/:id', (req, res) => {
                 return;
             }
             const contents = JSON.parse(data);
-            console.log('old',contents);
-            const newContents = contents.filter(x => x.notes_id !== req.params.id);
+            console.log('old', contents);
+            const newContents = contents.filter(x => x.id !== req.params.id);
             console.log('new', newContents);
             if (contents.length === newContents.length) {
                 res.status(400).json("id not found");
